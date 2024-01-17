@@ -20,9 +20,9 @@ struct LoginView: View {
                 // Login Form
                 Form {
                     TextField("Email Address", text: $email)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    SecureField("Email Address", text: $email)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .textFieldStyle(DefaultTextFieldStyle())
+                    SecureField("Password", text: $password)
+                        .textFieldStyle(DefaultTextFieldStyle())
                     
                     Button(action: {
                         // Attempt log in
@@ -36,6 +36,7 @@ struct LoginView: View {
                                 .bold()
                         }
                     })
+                    .padding()
                 }
                 
                 // Create Account
