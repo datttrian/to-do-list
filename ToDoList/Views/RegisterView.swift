@@ -26,6 +26,11 @@ struct RegisterView: View {
                 
                 SecureField("Password", text: $password)
                     .textFieldStyle(DefaultTextFieldStyle())
+                
+                TLButton(title: "Create Account", background: .green) {
+                    // Attemp registration
+                }
+                .padding()
             }
             .offset(y: -50)
             
