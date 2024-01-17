@@ -12,33 +12,42 @@ struct LoginView: View {
     @State var password = ""
     
     var body: some View {
-        VStack {
-            // Header
-            HeaderView()
-            
-            // Login Form
-            Form {
-                TextField("Email Address", text: $email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                SecureField("Email Address", text: $email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+        NavigationView {
+            VStack {
+                // Header
+                HeaderView()
                 
-                Button(action: {
-                    // Attempt log in
-                }, label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(Color.blue)
-                        
-                        Text("Log In")
-                            .foregroundColor(Color.white)
-                            .bold()
-                    }
-                })
+                // Login Form
+                Form {
+                    TextField("Email Address", text: $email)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    SecureField("Email Address", text: $email)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    
+                    Button(action: {
+                        // Attempt log in
+                    }, label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundColor(Color.blue)
+                            
+                            Text("Log In")
+                                .foregroundColor(Color.white)
+                                .bold()
+                        }
+                    })
+                }
+                
+                // Create Account
+                VStack {
+                    Text("New around here?")
+                    
+                    NavigationLink("Create An Account", destination: RegisterView())
+                }
+                .padding(.bottom, 50)
+                
+                Spacer()
             }
-            
-            // Create Account
-            Spacer()
         }
     }
 }
