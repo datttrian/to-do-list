@@ -24,7 +24,7 @@ struct RegisterView: View {
                 
                 TextField("Email Address", text: $email)
                     .textFieldStyle(DefaultTextFieldStyle())
-                    .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                    .autocapitalization(.none)
                     .autocorrectionDisabled()
                 
                 SecureField("Password", text: $password)
