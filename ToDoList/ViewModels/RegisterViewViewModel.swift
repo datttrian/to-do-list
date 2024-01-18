@@ -30,7 +30,10 @@ class RegisterViewViewModel: Observable {
     }
     
     private func insertUserRecord(id: String) {
-        
+        let newUser = User(id: id, 
+                           name: name,
+                           email: email,
+                           joined: Date().timeIntervalSince1970)
     }
     
     private func validate() -> Bool {
