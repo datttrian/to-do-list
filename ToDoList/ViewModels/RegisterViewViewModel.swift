@@ -5,10 +5,11 @@
 //  Created by datttrian on 2024-01-16.
 //
 
+import FirebaseFirestore
 import FirebaseAuth
 import Foundation
 
-class RegisterViewViewModel: Observable {
+class RegisterViewViewModel: ObservableObject {
     @Published var name = ""
     @Published var email = ""
     @Published var password = ""
@@ -30,10 +31,16 @@ class RegisterViewViewModel: Observable {
     }
     
     private func insertUserRecord(id: String) {
-        let newUser = User(id: id, 
+        let newUser = User(id: id,
                            name: name,
                            email: email,
                            joined: Date().timeIntervalSince1970)
+        
+        let db = Firestore.firestore()
+        
+        db.collection("users")
+                .document(id)
+                .setData(newUser.asDictionary())
     }
     
     private func validate() -> Bool {
