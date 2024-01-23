@@ -26,12 +26,11 @@ struct ToDoListView: View {
                 List(items) { item in
                     ToDoListItemView(item: item)
                         .swipeActions {
-                            Button {
+                            Button("Delete") {
                                 // Delete
-                            } label: {
-                                Text("Delete")
-                                    .background(Color.red)
+                                viewModel.delete(id: item.id)
                             }
+                            .background(Color.red)
                         }
                 }
                 .listStyle(PlainListStyle())
