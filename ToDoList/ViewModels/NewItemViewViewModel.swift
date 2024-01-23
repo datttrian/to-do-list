@@ -12,4 +12,8 @@ class NewItemViewViewModel: ObservableObject {
     @Published var dueDate = Date()
     
     init () {}
+    
+    func save() {
+
+    }
 }
