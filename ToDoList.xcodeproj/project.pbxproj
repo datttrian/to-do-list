@@ -166,10 +166,10 @@
 				DA3A4B1B2B57602800FFE7DE /* MainView.swift */,
 				DA3A4B642B5766C300FFE7DE /* ProfileView.swift */,
 				DA3A4B702B57673C00FFE7DE /* ToDoListView.swift */,
+				DA3A4B6E2B57672000FFE7DE /* ToDoListItemView.swift */,
 				DA3A4B682B5766E300FFE7DE /* NewItemView.swift */,
 				DA3A4B6A2B5766EC00FFE7DE /* LoginView.swift */,
 				DA3A4B6C2B5766F500FFE7DE /* RegisterView.swift */,
-				DA3A4B6E2B57672000FFE7DE /* ToDoListItemView.swift */,
 				DA3A4B842B576B2F00FFE7DE /* HeaderView.swift */,
 				DA3A4B862B57768100FFE7DE /* TLButton.swift */,
 			);
