@@ -13,18 +13,45 @@ struct ProfileView: View {
     var body: some View {
         NavigationView {
             VStack {
+                // Avatar
+                Image(systemName: "person.circle")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(Color.blue)
+                    .frame(width: 125, height: 125)
                 
-            }
-            .navigationTitle("Profile")
-            .toolbar {
-                Button {
-                    // Action
-                } label: {
-                    Image(systemName: "plus")
+                // Info: Name, Email, Member since
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("Name: ")
+                        Text("Afraz Siddiqui ")
+                    }
+                    
+                    HStack {
+                        Text("Email: ")
+                        Text("Afraz Siddiqui ")
+                    }
+                    
+                    HStack {
+                        Text("Member Since: ")
+                        Text("Afraz Siddiqui ")
+                    }
                 }
+                
+                // Sign out
+            }
+            
+        }
+        .navigationTitle("Profile")
+        .toolbar {
+            Button {
+                // Action
+            } label: {
+                Image(systemName: "plus")
             }
         }
     }
+}
 }
 
 #Preview {
