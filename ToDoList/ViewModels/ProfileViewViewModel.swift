@@ -36,6 +36,10 @@ class ProfileViewViewModel: ObservableObject {
     }
     
     func logOut() {
-        
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print(error)
+        }
     }
 }
